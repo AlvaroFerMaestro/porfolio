@@ -1,0 +1,9 @@
+.articuloedu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50%;
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+}

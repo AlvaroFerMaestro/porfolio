@@ -1,0 +1,158 @@
+*{
+    text-decoration: none;
+    list-style: none;
+    color: rgba(255, 255, 255, 0.868);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.nav{
+    font-weight: 900;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    justify-content: space-around;
+    transition: tranform 0.3;
+    padding-bottom: 10px;
+}
+
+.nav > ul{
+    display: flex;
+    flex-direction: column;
+    margin-top: 70px;
+    gap: 10px;
+}
+
+.liNav:hover{
+    transform: scale(1.2);
+    color: rgb(7, 124, 227);
+}
+
+h1{
+    margin-top: 70px;
+}
+
+.ulHamburguesa{
+    display: none;
+  }
+   .ulMain{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: end;
+    gap: 100px;
+    font-size: 23px;
+   }
+
+   @media screen and (max-width: 650px){
+    .bars__menu{
+      top: 80px;
+      right: 5%;
+      position: fixed;
+      display: flex;
+      flex-direction: column;
+      width: 30px;
+      height: 30px;
+      cursor: pointer;
+      z-index: 9999999;
+    }
+    
+    .bars__menu span {
+      display: block;
+      width: 100%;
+      height: 2px;
+      background: rgba(248, 244, 244, 0.566);
+      margin-top: 6px;
+      transform-origin: 0px 100%;
+      transition: all 600ms;
+      z-index: 2;
+    }
+    
+    .activeline1__bars-menu{
+      transform: rotate(45deg) translate(-2px, 1px);
+    }
+    
+    .activeline2__bars-menu{
+      opacity: 0;
+      margin-left: -30px;
+    }
+    
+    .activeline3__bars-menu{
+      transform: rotate(-45deg) translate(-4px, 2px);
+    }
+    
+    .ulHamburguesa{ 
+      display: none;
+      position: fixed;
+      background-color: #1d1d1d;
+      opacity: 0.8;
+      top: 120px;
+      right: 0%;
+      width: 20%;
+      height: 100%;
+      padding-right: 50px;
+      position: absolute;
+      align-items: flex-end;
+      justify-content: center;
+      flex-direction: column;
+     
+    }
+    .menuActivo{
+      display: flex;
+    }
+    .aHamburguesa{
+        margin-top: 30px;
+      color: rgb(248, 244, 244);
+      transition: transform 0.5s;
+      background-color: #1d1d1d;
+     }
+     .aHamburguesa:hover{
+      color: rgb(181, 128, 100);
+      transform:  scale(1.1);
+     }
+     .ulHamburguesa{
+      position: fixed;
+      flex-direction: column;
+      top: 120px;
+      width: 30%;
+      height: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: start;
+      gap: 100px;
+      font-size: 23px;
+      display: none;
+     }
+     .limain{
+      display: none;
+     }
+
+     .lihamburguesa{
+        display: flex;
+        flex-direction: column;
+        background-color: #1d1d1d;
+     }
+    .nav> ul{
+      display: none;
+    }
+
+    .newNav{
+        display: flex;
+    }
+   }
+
+   @media screen and (max-width: 500px){
+    div > .bars__menu{
+      display: block;
+      top: 30px;
+      right: 40%;
+    }
+
+    .ulHamburguesa{
+      display: none;
+      display: block;
+      top: 60px;
+      width: 100%;
+      z-index: 99999999;
+    }
+}
